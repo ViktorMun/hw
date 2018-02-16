@@ -12,4 +12,15 @@ def display_name_phone
     read_contacts.map { |var| puts "#{var[:name]}=>#{var[:phone]}" }
 end
 
+#2.1 Assignment
+
+def take_special
+  read_contacts.select { |var|
+    if var[:phone].include?("+1")
+      puts var[:phone]
+    end}
+end
+
 display_name_phone
+
+take_special
