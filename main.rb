@@ -21,6 +21,13 @@ def take_special
     end}
 end
 
+#2.2 Assignment
+read_contacts.select { |var|
+    if var[:email].include?(".org")
+      puts var[:email]
+    end}
+
+
 display_name_phone
 
 take_special
