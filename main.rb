@@ -33,8 +33,16 @@ end
 def amount_of_phones
   x=read_contacts.select { |var|
     var[:phone].include?("+1")}
-puts x
-x.reduce(0) {|key, value| puts value.length-1}
+    puts x
+  x.reduce(0) {|key, value| puts value.length-1}
 end
 
-amount_of_phones
+#3.2 Assignment
+def amount_of_emails
+  x=read_contacts.select { |var|
+    var[:email].include?(".org")}
+    puts x
+  x.reduce(0) {|key, value| puts value.length-1}
+end
+
+amount_of_emails
