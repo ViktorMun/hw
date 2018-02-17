@@ -22,12 +22,19 @@ def take_special
 end
 
 #2.2 Assignment
-read_contacts.select { |var|
+def take_special_email
+  read_contacts.select { |var|
     if var[:email].include?(".org")
       puts var[:email]
     end}
+end
 
+#3.1 Assignment
+def amount_of_phones
+  x=read_contacts.select { |var|
+    var[:phone].include?("+1")}
+puts x
+x.reduce(0) {|key, value| puts value.length-1}
+end
 
-display_name_phone
-
-take_special
+amount_of_phones
